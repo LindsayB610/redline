@@ -1,0 +1,56 @@
+{
+  "clientId": "demo-redline",
+  "generatedAt": "2026-06-25T00:00:00.000Z",
+  "sources": [
+    {
+      "id": "demo-source-positioning",
+      "clientId": "demo-redline",
+      "title": "Northstar positioning",
+      "path": "canonical/positioning.md",
+      "type": "local",
+      "tier": "canonical",
+      "trustLevel": "trusted"
+    },
+    {
+      "id": "demo-source-buyer-language",
+      "clientId": "demo-redline",
+      "title": "Buyer language notes",
+      "path": "canonical/buyer-language.md",
+      "type": "local",
+      "tier": "canonical",
+      "trustLevel": "trusted"
+    },
+    {
+      "id": "demo-source-proof-library",
+      "clientId": "demo-redline",
+      "title": "Approved proof notes",
+      "path": "canonical/proof-library.md",
+      "type": "local",
+      "tier": "foundational",
+      "trustLevel": "trusted"
+    }
+  ],
+  "canonicalRegistry": [
+    {
+      "moduleId": "positioning",
+      "clientId": "demo-redline",
+      "path": "canonical/positioning.md",
+      "readiness": "strong",
+      "provenance": ["demo-source-positioning"]
+    },
+    {
+      "moduleId": "buyer-language",
+      "clientId": "demo-redline",
+      "path": "canonical/buyer-language.md",
+      "readiness": "strong",
+      "provenance": ["demo-source-buyer-language"]
+    },
+    {
+      "moduleId": "proof-library",
+      "clientId": "demo-redline",
+      "path": "canonical/proof-library.md",
+      "readiness": "strong",
+      "provenance": ["demo-source-proof-library"]
+    }
+  ]
+}

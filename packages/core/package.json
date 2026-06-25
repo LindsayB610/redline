@@ -1,0 +1,82 @@
+{
+  "name": "@redline/core",
+  "version": "0.1.0",
+  "private": false,
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "redline": "./dist/cli.js"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./cli": {
+      "types": "./dist/cli.d.ts",
+      "import": "./dist/cli.js"
+    },
+    "./report": {
+      "types": "./dist/report.d.ts",
+      "import": "./dist/report.js"
+    },
+    "./validation": {
+      "types": "./dist/validation.d.ts",
+      "import": "./dist/validation.js"
+    },
+    "./schemas": {
+      "types": "./dist/schemas.d.ts",
+      "import": "./dist/schemas.js"
+    },
+    "./onboarding": {
+      "types": "./dist/onboarding.d.ts",
+      "import": "./dist/onboarding.js"
+    },
+    "./live-target-snapshot": {
+      "types": "./dist/liveTargetSnapshot.d.ts",
+      "import": "./dist/liveTargetSnapshot.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "pack:dry-run": "npm pack --dry-run --json",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "test": "vitest --run tests/proofApproval.test.ts tests/crawl.test.ts tests/reportSystem.test.ts tests/redlineParity.test.ts tests/schema.test.ts tests/auditPage.test.ts tests/editBrief.test.ts tests/cli.test.ts",
+    "test:public": "vitest --run tests/proofApproval.test.ts tests/crawl.test.ts tests/reportSystem.test.ts tests/redlineParity.test.ts tests/schema.test.ts tests/auditPage.test.ts tests/editBrief.test.ts tests/cli.test.ts"
+  },
+  "files": [
+    "dist/auditPage.*",
+    "dist/canonical.*",
+    "dist/cli.*",
+    "dist/crawl.*",
+    "dist/editBrief.*",
+    "dist/extract.*",
+    "dist/index.*",
+    "dist/judge.*",
+    "dist/liveTargetSnapshot.*",
+    "dist/loadClientPacket.*",
+    "dist/notionSnapshot.*",
+    "dist/onboarding.*",
+    "dist/promptTemplates.*",
+    "dist/proofApproval.*",
+    "dist/report.*",
+    "dist/schemas.*",
+    "dist/validation.*",
+    "dist/workspaceTemplate.*",
+    "docs",
+    "README.md",
+    "LICENSE"
+  ],
+  "dependencies": {
+    "cheerio": "^1.2.0",
+    "yaml": "^2.6.1",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "typescript": "^5.7.2",
+    "vitest": "^3.2.4"
+  }
+}

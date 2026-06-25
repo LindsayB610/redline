@@ -1,0 +1,8 @@
+node_modules/
+packages/*/node_modules/
+packages/*/dist/
+coverage/
+.vite/
+*.tsbuildinfo
+.DS_Store
+redline-public-clone-smoke.json

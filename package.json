@@ -1,0 +1,22 @@
+{
+  "name": "redline",
+  "version": "0.1.0",
+  "private": false,
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "redline": "./bin/redline.js"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "npm run build --workspace @redline/core",
+    "test": "npm run test --workspace @redline/core",
+    "typecheck": "npm run typecheck --workspace @redline/core",
+    "redline": "node bin/redline.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
